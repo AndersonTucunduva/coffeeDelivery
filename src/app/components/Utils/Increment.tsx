@@ -10,13 +10,17 @@ export function Increment() {
   }
 
   function handleDecrementQtde() {
-    setQtde(qtde - 1)
+    if (qtde === 1) {
+      setQtde(1)
+    } else {
+      setQtde(qtde - 1)
+    }
   }
 
   return (
     <>
       <button
-        className="h-10 w-6 rounded-l bg-basebutton text-purple hover:text-purpledark"
+        className="h-10 w-6 rounded-l bg-basebutton text-purpledark hover:text-purple"
         type="button"
         onClick={handleDecrementQtde}
       >
@@ -29,7 +33,7 @@ export function Increment() {
         onChange={(e) => setQtde(Number(e.target.value))}
       />
       <button
-        className="h-10 w-6 rounded-r bg-basebutton text-purple hover:text-purpledark"
+        className="h-10 w-6 rounded-r bg-basebutton text-purpledark hover:text-purple"
         onClick={handleIncrementQtde}
         type="button"
       >

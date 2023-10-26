@@ -1,8 +1,17 @@
+'use client'
+
 import { ShoppingCartIcon, MapPin } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useContext } from 'react'
+import { SellContext } from '../context/context'
 
 export function Header() {
+  const { sell } = useContext(SellContext)
+
+  console.log(sell)
+  console.log(sell.length)
+
   return (
     <>
       <header className="mt-8 flex h-24 justify-between px-40">
@@ -31,7 +40,7 @@ export function Header() {
           </Link>
           <div>
             <h1 className="-m-4 rounded-full bg-yellowdark p-1 text-center text-white">
-              1
+              {sell.length}
             </h1>
           </div>
         </div>

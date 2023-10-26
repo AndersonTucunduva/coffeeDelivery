@@ -2,6 +2,7 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { roboto } from '@/app/fonts'
 import { Header } from './components/Header'
+import { SellProvider } from './context/context'
 
 export const metadata: Metadata = {
   title: 'Coffee Delivery',
@@ -16,7 +17,9 @@ export default function RootLayout({
   return (
     <html lang="ptBR" className="bg-background">
       <body className={roboto.className}>
-        <Header /> {children}
+        <SellProvider>
+          <Header /> {children}
+        </SellProvider>
       </body>
     </html>
   )
