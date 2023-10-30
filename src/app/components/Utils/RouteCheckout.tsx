@@ -8,6 +8,8 @@ import { SellContext } from '@/app/context/context'
 export function RouteCheckout() {
   const { sell } = useContext(SellContext)
 
+  const validSell = sell.length > 0
+
   return (
     <div>
       <Link href={'/checkout'}>
@@ -16,9 +18,11 @@ export function RouteCheckout() {
         </button>
       </Link>
       <div>
-        <h1 className="-mt-16 ml-5 rounded-full bg-yellowdark p-1 text-center text-white">
-          {sell.length}
-        </h1>
+        {validSell && (
+          <h1 className="-mt-16 ml-5 rounded-full bg-yellowdark p-1 text-center text-white">
+            {sell.length}
+          </h1>
+        )}
       </div>
     </div>
   )

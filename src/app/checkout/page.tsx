@@ -28,6 +28,8 @@ export default function Checkout() {
     },
   )
 
+  const validSell = sell.length > 0
+
   return (
     <>
       <div className="flex justify-center">
@@ -146,8 +148,7 @@ export default function Checkout() {
             </div>
             <div className="mt-2 flex justify-between text-basetext">
               <h1>Entrega</h1>
-
-              <h2>R$ 3,50</h2>
+              {validSell && <h2>R$ 3,50</h2>}
             </div>
             <div className="mt-2 flex justify-between text-xl font-bold text-basesubtitle">
               <h1>TOTAL</h1>
