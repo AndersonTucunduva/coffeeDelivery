@@ -2,7 +2,7 @@ import { DollarSign, MapPin, Timer } from 'lucide-react'
 import Image from 'next/image'
 import { baloo2 } from '../fonts'
 
-export default function complete() {
+export default function Complete() {
   return (
     <>
       <div className="p-40 ">

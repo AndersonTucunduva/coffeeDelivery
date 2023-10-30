@@ -5,6 +5,7 @@ import { baloo2 } from '../fonts'
 import { ShoppingCartIcon } from 'lucide-react'
 import { useContext, useState } from 'react'
 import { SellContext } from '../context/context'
+import { priceFormatter } from '../utils/formatter'
 
 interface productProps {
   id: number
@@ -12,11 +13,12 @@ interface productProps {
   Category: string
   img: string
   Description: string
-  Price: string
+  Price: number
   qtde?: number
 }
 
 export function Product({
+  id,
   Name,
   Category,
   img,
@@ -40,7 +42,7 @@ export function Product({
   const { sell, setSell } = useContext(SellContext)
 
   function carSell() {
-    setSell([...sell, { Name, qtde, img, Price }])
+    setSell([...sell, { id, Name, qtde, img, Price }])
   }
 
   return (
@@ -67,8 +69,9 @@ export function Product({
         <h2 className="text-sm text-baselabel">{Description}</h2>
         <div className="flex">
           <div className="mt-8 flex items-baseline justify-center">
-            <h1 className="mr-1 text-xs">R$</h1>
-            <p className={`text-xl font-bold ${baloo2.className}`}>{Price}</p>
+            <p className={`text-xl font-bold ${baloo2.className}`}>
+              {priceFormatter.format(Price)}
+            </p>
           </div>
           <div className="ml-2 flex items-end justify-center">
             <button

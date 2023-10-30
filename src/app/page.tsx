@@ -10,7 +10,7 @@ export default function Home() {
       Category: 'Tradicional',
       img: './cafeTradicional.svg',
       Description: 'O tradicional café feito com agua quente e grãos moidos',
-      Price: '9,90',
+      Price: 9.9,
     },
     {
       id: 2,
@@ -18,7 +18,7 @@ export default function Home() {
       Category: 'Tradicional',
       img: './Cafe_Americano.svg',
       Description: 'Expresso diluído, menos intenso que o tradicional',
-      Price: '9,90',
+      Price: 8.9,
     },
     {
       id: 3,
@@ -26,7 +26,7 @@ export default function Home() {
       Category: 'Tradicional',
       img: './Cafe_Cremoso.svg',
       Description: 'Café expresso tradicional com espuma cremosa',
-      Price: '9,90',
+      Price: 10.9,
     },
     {
       id: 4,
@@ -34,7 +34,7 @@ export default function Home() {
       Category: 'Gelado',
       img: './Cafe_Gelado.svg',
       Description: 'Bebida preparada com café expresso e cubos de gelo',
-      Price: '9,90',
+      Price: 9.9,
     },
     {
       id: 5,
@@ -42,7 +42,7 @@ export default function Home() {
       Category: 'Com Leite',
       img: './Cafe_Leite.svg',
       Description: 'Meio a meio de expresso tradicional com leite vaporizado',
-      Price: '9,90',
+      Price: 9.9,
     },
     {
       id: 6,
@@ -50,7 +50,7 @@ export default function Home() {
       Category: 'Com Leite',
       img: './Cafe_Latte.svg',
       Description: 'Expresso diluído, menos intenso que o tradicional',
-      Price: '9,90',
+      Price: 9.9,
     },
   ]
   return (
